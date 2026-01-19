@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Result</title>
+    <link rel="stylesheet" href="viewresult.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to Poornima University</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#">View Result</a></li>
+                <li><a href="addresult.html">Add Result</a></li>
+                <li><a href="editresult.html">Edit Result</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h2>View Results</h2>
+        <div id="searchResult"></div> 
+    </div>
+
+    <footer class="footer">
+        <p>Footer content goes here</p>
+    </footer>
+
+    <script src="search.js"></script>
+    <script>
+        
+        function displaySearchResults() {
+            var searchResultElement = document.getElementById('searchResult');
+            var searchResults = getSearchResults();
+            if (searchResults.length > 0) {
+                var resultHTML = '<ul>';
+              
+                searchResults.sort(function(a, b) {
+                    if (a.year !== b.year) {
+                        return a.year - b.year;
+                    } else {
+                        return a.registrationNumber.localeCompare(b.registrationNumber);
+                    }
+                });
+                searchResults.forEach(function(student) {
+                    resultHTML += '<li>';
+                    resultHTML += '<strong>Registration Number:</strong> ' + student.registrationNumber + '<br>';
+                    resultHTML += '<strong>Name:</strong> ' + student.name + '<br>';
+                    resultHTML += '<strong>Year:</strong> ' + student.year + '<br>';
+                    resultHTML += '<strong>Marks:</strong><br>';
+                    resultHTML += '<ul>';
+                    resultHTML += '<li>Year I: ' + student.marks.yearI + '</li>';
+                    resultHTML += '<li>Year II: ' + student.marks.yearII + '</li>';
+                    resultHTML += '<li>Year III: ' + student.marks.yearIII + '</li>';
+                    resultHTML += '<li>Year IV: ' + student.marks.yearIV + '</li>';
+                    resultHTML += '</ul>';
+                    resultHTML += '<strong>Mobile Number:</strong> ' + student.mobileNumber + '<br>';
+                    resultHTML += '</li>';
+                });
+                resultHTML += '</ul>';
+                searchResultElement.innerHTML = resultHTML;
+            } else {
+                searchResultElement.innerHTML = "No results found.";
+            }
+        }
+
+        
+        displaySearchResults();
+    </script>
+</body>
+</html>

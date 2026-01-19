@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.header {
+    background-color: #3b5998;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: rgb(249, 181, 170);
+    text-decoration: none;
+    font-size: 24px;
+    text-decoration: underline;
+    transition: color 0.3s ease; /* Transition for color change */
+}
+
+nav ul li a:hover {
+    color: #fff; /* Change color on hover */
+}
+
+.search-container {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.search-container input[type=text] {
+    padding: 6px;
+    margin-top: 4px;
+    font-size: 17px;
+    border: 2px solid #3b5998;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease; /* Transition for border color change */
+}
+
+.search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 4px;
+    margin-left: 10px; /* Added margin to separate button from input */
+    background: #3b5998;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition for background color change */
+}
+
+.search-container button:hover {
+    background: #2a3f6e;
+}
+
+.main-content {
+    color: rgb(255, 0, 0);
+    padding: 25px;
+}
+
+.footer {
+    background-color: #3b5998;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.background-image {
+    background-image: url('poornima.png');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 90px; /* Adjust as needed based on the header height */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Ensure the background image is behind other content */
+}

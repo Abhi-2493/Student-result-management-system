@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to Poornima University</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="viewresult.html">View Result</a></li>
+                <li><a href="addresult.html">Add Result</a></li>
+                <li><a href="editresult.html">Edit Result</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="background-image"></div>
+
+    <section class="main-content">
+        <!-- Your main content goes here -->
+        <form id="searchForm" action="search.html" method="GET">
+            <label for="regNumber">Search by Registration Number:</label>
+            <input type="text" id="regNumber" name="regNumber">
+            <button type="submit">Search</button>
+        </form>
+        <div id="searchResult"></div> <!-- Display search result here -->
+    </section>
+
+    <footer class="footer">
+        <p>

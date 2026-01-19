@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign In</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <div class="input-group">
+                    <a href="#" id="forgotPassword">Forgot Password?</a>
+                </div>
+                <div class="btn-field">
+                    <button type="submit" id="signinBtn">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username === "Abhi1124" && password === "7891756770") {
+               
+                setTimeout(function() {
+                    window.location.href = "dashboard.html";
+                }, 500);
+            } 
+            else if (username === "Deep" && password === "8000331996") {
+                
+                setTimeout(function() {
+                    window.location.href = "dashboard.html";
+                }, 500); 
+            }
+            else if (username === "Tanishk" && password === "9079327085") {
+               
+                setTimeout(function() {
+                    window.location.href = "dashboard.html";
+                }, 500); 
+            }
+            else if (username === "Pratik" && password === "9079327085") {
+                
+                setTimeout(function() {
+                    window.location.href = "dashboard.html";
+                }, 500); 
+            }else {
+                alert("Incorrect username or password. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>

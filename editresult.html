@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Result</title>
+    <link rel="stylesheet" href="editresult.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to Poornima University</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="viewresult.html">View Result</a></li>
+                <li><a href="addresult.html">Add Result</a></li>
+                <li><a href="editresult.html">Edit Result</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h2>Edit Result</h2>
+        <form id="editResultForm">
+            <label for="editRegistrationNumber">Enter Registration Number:</label>
+            <input type="text" id="editRegistrationNumber" name="editRegistrationNumber" required><br><br>
+            <button type="button" id="searchButton">Search</button>
+        </form>
+
+        <div id="editFormContainer" style="display:none;">
+            <h3>Student Details</h3>
+            <form id="editStudentForm">
+                <!-- Fields to edit student details -->
+                <label for="editName">Name:</label>
+                <input type="text" id="editName" name="editName" required><br><br>
+                
+                <label for="editYear">Year:</label>
+                <input type="number" id="editYear" name="editYear" min="1" max="4" required><br><br>
+                
+                <label for="editMarksYear1">Marks (Year I):</label>
+                <input type="number" id="editMarksYear1" name="editMarksYear1" required><br><br>
+                
+                <label for="editMarksYear2">Marks (Year II):</label>
+                <input type="number" id="editMarksYear2" name="editMarksYear2"><br><br>
+                
+                <label for="editMarksYear3">Marks (Year III):</label>
+                <input type="number" id="editMarksYear3" name="editMarksYear3"><br><br>
+                
+                <label for="editMarksYear4">Marks (Year IV):</label>
+                <input type="number" id="editMarksYear4" name="editMarksYear4"><br><br>
+                
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Footer content goes here</p>
+    </footer>
+
+    <script src="search.js"></script>
+    <script src="editresult.js"></script>
+</body>
+</html>
